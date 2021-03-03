@@ -47,23 +47,6 @@ submit.addEventListener('click', () => {
         pageSection.firstElementChild.innerHTML = `<h2 class="mx-auto" style="color: white">Not found</h2>`;
     }
 })
-
-
-    const getUrl = () => {
-        const nextUrl = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=${count}`;
-
-        console.log(count)
-    
-            fetch(nextUrl).then(res => {
-                res.json().then(data => {
-                    let pokemons = data.results;
-                    //  pokemons = filterPokemon;
-                    
-                    
-                    getPokemons(pokemons)
-                })
-            })
-    }
     
 
     const getPokemons = pokemons => {
