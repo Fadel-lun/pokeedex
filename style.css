@@ -34,14 +34,16 @@ body{
 #pokemons-list .card:hover{
     color: cornsilk;
     cursor: pointer;
+    animation-name: bounce;
+    animation-duration: 0.5s;
     
 }
 
 #pokemons-list .card .container-img{
     width: 150px;
     margin: 0 auto;
-    border-radius: 50%;
-    background: rgb(109, 109, 109);
+    /* border-radius: 50%;
+    background: rgb(109, 109, 109); */
 }
 
 #pokemons-list .card .container-img img{
@@ -49,88 +51,34 @@ body{
     box-sizing: border-box;
 }
 
-.two-arrow{
-    width: 100%;
-    height:50px;
+.search-container{
+    width: 70%;
+    height:40px;
 }
 
-.two-arrow .left-arrow{
-    width: 0;
-    height: 0;
-    border-right: 20px solid black;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid transparent;
-    border-top: 20px solid transparent;
-    transform: translateX(-240px);
-}
-.two-arrow .left-arrow:hover{
-    cursor: pointer;
-    border-right: 20px solid rgba(0, 0, 0, 0.61);
-}
-
-.two-arrow .right-arrow{
-    width: 0;
-    height: 0;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid black;
-    border-top: 20px solid transparent;
-     transform: translateX(240px);
-}
-.two-arrow .right-arrow:hover{
-    cursor: pointer;
-    border-left: 20px solid rgba(0, 0, 0, 0.61);
-}
-
-.two-arrow p{
+.search-container p{
     color: cornsilk;
     font-size: 2rem;
 }
-
-@media(max-width:765px){
-    .two-arrow .right-arrow{
-        transform: translateX(20px);
-    }
-
-    .two-arrow .left-arrow{
-        transform: translateX(-20px);
-    }
-    #pokemons-list .card{
-        width: 10rem;
-        padding: 20px 0;
-        font-size: 18px;
-    }
-    #pokemons-list .card .container-img{
-        background: transparent;
-    }
-    #pokemons-list .card .container-img img{
-        width: 100px;
-    }
-
+.player-data{
+    text-align: center;
+}
+.cp-text{
+    font-size: 1.2rem;
+    /* padding: 0 0 0 3px; */
 }
 
-/* css to habitat.html */
-#pokemon-habitats{
-    border: 5px solid rgb(109, 109, 109);
+@keyframes bounce{
+    0%  { transform: translateY(0px)}
+    20% {transform: translateY(-20px)}
+    40% {transform: translateY(0px)}
+    60% {transform: translateY(-10px)}
+    80% {transform: translateY(0px)}
 }
 
-#pokemon-habitats .nav-item{
-    background: rgb(0, 0, 0);
-    
+@media(max-width: 576px){
+    #search, #submit{
+        display: none;
+    }
 }
 
-#pokemon-habitats .nav-item a{
-    color: gray;
-    
-} 
-
-#pokemon-habitats .tab-content .tab-pane{
-    border-top: 0 !important;
-    background: rgb(37, 37, 37);
-    color: rgb(138, 138, 138);
-}
-
-#pokemon-habitats .tab-content .tab-pane .col{
-    background: transparent !important;
-    
-}

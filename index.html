@@ -16,18 +16,18 @@
   <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
-      <div class="two-arrow d-flex justify-content-center">
-        <div class="left-arrow"></div>
-        <p><span class="page">1</span> / 15</p>
-        <div class="right-arrow"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-flex justify-content-center">
+      <div class="search-container row">
+          <input id="search" class="col col-sm-8 col-md-10 form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+          <button id="submit" class="col btn btn-outline-primary my-2 my-sm-0">Search</button>
+        
       </div>
     </nav>
 
     <!-- akhir navbar -->
 
     <div class="container">
-     
+      
       
       <!-- daftar pokemon -->
       <section id="pokemons-list" class="rounded my-3">
@@ -39,12 +39,6 @@
         <div class="modal fade" id="dataPokemonModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">01</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
               <div class="modal-body">
                   <div class="container-img">
                       <img src="" alt="">                  
