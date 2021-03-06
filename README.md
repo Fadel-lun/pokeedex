@@ -1,1 +1,1 @@
-Membuat daftar pokemon beserta informasinya
+Aplikasi mesin pencarian pokemon sederhana... :)
